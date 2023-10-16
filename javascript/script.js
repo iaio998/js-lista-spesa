@@ -21,3 +21,20 @@ const list = [];
 //     resultEl.innerHTML = msg;
 //   }
 // });
+
+let item = "";
+
+while (item !== "stop".toLocaleLowerCase()) {
+  item = prompt("Inserisci un elemento");
+  item = item.trim();
+  if (item !== "stop" && item !== "") {
+    console.log(item);
+    list.push(item);
+  }
+}
+console.log(list);
+for (let i = 0; i < list.length; i++) {
+  msg = `Gentile utente ecco a lei la lista del carrello: ${list}`;
+  resultEl.classList.remove("d-none");
+  resultEl.innerHTML = msg;
+}
